@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="friendMachine">
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+    <title>Angular Friends</title>
+  </head>
+  <body ng-controller="friendCtrl">
+    <div class="wrapper">
+    <header>
+      <p>The <span>facebook</span> Friend Machine</p>
+    </header>
+    <main>
+      <div class="input">
+      <input type="text" name="name" value="Search by Name" ng-model="nameFilter">
+      <br>
+      <input type="text" name="place" value="Search by Location" ng-model="locationFilter">
+    </div>
+    <div class="filters">
+      <select name="friends">
+        <option value="default">#friends</option>
+        <option value="numOfFriends" ng-model="most">most</option>
+        <option value="numOfFriends" ng-model="least">least</option>
+      </select>
+        <select name="order">
+          <option value=order>order</option>
+          <option value="name" ng-model="ascend">ascending</option>
+          <option value="name" ng-model="decend">decending</option>
+        </select>
+    </div>
+    <br>
+    <div class="stream">
+      <div class="friendBox" ng-repeat="friend in friends | filter: {name: nameFilter, location:locationFilter} track by $index">
+        <img src="alagoon.jpg" style="float:left; height:90px; padding-right: 10px;">
+        <p class="name">{{ friend.name }}</p>
+        <p class="location">location: {{ friend.location }}</p>
+        <br>
+        <br>
+        <p class="status">status: {{ friend.status }}</p>
+        <p class="numOfFriends">friends: {{ friend.numOfFriends }}</p>
+      </div>
+    </div>
+    </main>
+  </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controller.js"></script>
+  </body>
+</html>

@@ -1,0 +1,86 @@
+header{
+  text-align: center;
+  background-color: #4867AA;
+  margin: 0;
+  color: white;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header p{
+  font-size: 30px;
+  font-family: helvetica;
+  font-weight: lighter;
+  margin: 0;
+}
+
+header span{
+  font-weight: bold;
+  font-family: Lucida;
+}
+
+.wrapper{
+  border: 1px solid gray;
+}
+
+.input{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.input input{
+  width: 70vw;
+  border-radius: 5px;
+  padding: 5px;
+  text-decoration: none;
+}
+.filters {
+  text-align: center;
+}
+
+.stream{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5px;
+}
+
+.friendBox{
+  border: 1px solid black;
+  font-family: helvetica;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 10px;
+  width: 70vw;
+}
+
+.stream{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.friendBox p{
+  margin: 0;
+}
+
+.friendBox .name{
+  font-size: 40px;
+}
+
+.friendBox .location{
+  font-size: 15px;
+  color: gray;
+}
+
+.numOfFriends{
+  color: #4867AA;
+  padding-top: 5px;
+}
